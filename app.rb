@@ -13,11 +13,17 @@ set :session_secret, 'super secret'
 #   "Rise and Shine!"
 # end
 
-get '/cat' do
+get '/random-cat' do
 # We have moved this bit to the index.erb file (Sinatra: Keeping the views clean)
  #  "<div style='border: 3px dashed blue'>
  #  <img src='http://bit.ly/1eze8aE'>
  # </div>"
   @name = ["Lion", "Sphinx", "Phoenix"].sample
  erb :index
+end
+
+get '/named-cat' do
+  p params 
+  @name = params[:name]
+  erb :index
 end

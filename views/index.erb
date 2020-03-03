@@ -1,6 +1,8 @@
-<!-- get '/cat' do -->
+<!-- Sinatra: introduting params: pritting the name only if the visitor is defined %> -->
+
+<% if @name %>
 <h1>My name is <%= @name %></h1>
-  <div style='border: 3px dashed blue'>
+<% end %>
+<div style='border: 3px dashed blue'>
   <img src='http://bit.ly/1eze8aE'>
-  </div>
-<!-- end -->
+</div>
